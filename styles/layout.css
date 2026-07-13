@@ -1,0 +1,242 @@
+/* ============================================
+   EdSeva — Navbar & Footer
+   ============================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-primary);
+}
+
+.brand:hover {
+  color: var(--color-primary);
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.4rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav-links a {
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: var(--color-text);
+  padding: 0.4rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-secondary);
+}
+
+.nav-cta {
+  margin-left: var(--space-1);
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-1) var(--space-3) var(--space-3);
+    display: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    display: block;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.08rem;
+    padding: 0.95rem 0.35rem;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a[aria-current="page"] {
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-primary);
+  }
+
+  .nav-cta {
+    margin: var(--space-2) 0 0;
+  }
+
+  .nav-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-primary);
+  color: var(--color-text-on-dark);
+  padding: var(--space-6) 0 var(--space-3);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-4);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-on-dark-18);
+}
+
+.footer-brand .brand-name {
+  color: var(--color-text-on-dark);
+}
+
+.footer-brand .brand-mark {
+  background: var(--color-secondary);
+}
+
+.footer-tagline {
+  color: var(--color-on-dark-75);
+  max-width: 30ch;
+  margin-top: var(--space-2);
+}
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: var(--space-2);
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--color-on-dark-82);
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-bg);
+}
+
+.social-row {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-on-dark-35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-on-dark);
+}
+
+.social-icon:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.social-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  font-size: 0.85rem;
+  color: var(--color-on-dark-60);
+}
+
+@media (max-width: 760px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-2);
+  }
+}
