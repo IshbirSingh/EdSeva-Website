@@ -667,4 +667,6 @@
   border-color: var(--color-primary-hover);
 }
 
-
+.social-icon.google {
+  font-size: 25px;
+}
