@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edseva.org/sitemap.xml
