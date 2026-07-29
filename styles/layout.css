@@ -32,8 +32,8 @@
 }
 
 .brand-mark {
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   border-radius: 0;
   background: transparent;
   flex-shrink: 0;
@@ -43,6 +43,9 @@
   padding: 0;
   box-shadow: none;
   overflow: hidden;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: 10px;
 }
 
 .brand-mark img {
@@ -173,7 +176,9 @@
 }
 
 .footer-brand .brand-mark {
-  background: var(--color-secondary);
+  background: transparent;
+  width: 72px;
+  height: 72px;
 }
 
 .footer-tagline {
