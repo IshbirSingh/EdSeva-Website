@@ -43,6 +43,13 @@ window.EDSEVA_PARTNERS = [
         logo: "images/partners/Warwick Sikh Soc.jpeg",
         blurb: "The Sikh Society of the <b>University of Warwick</b>, a well-established institution known for its academic rigor and vibrant student life. They support us through the provision of mentors and venues for our events."
     },
+    {
+        name: "LSESU Sikh Society",
+        instagram: "https://www.instagram.com/lsesusikhsociety/",
+        linkedin: "https://www.linkedin.com/company/lsesu-sikh-society/",
+        logo: "images/partners/LSE Sikh Soc.jpg",
+        blurb: "The Sikh Society of the <b>London School of Economics</b>, a world-renowned institution for social sciences and economics. They support us through the provision of mentors and venues for our events."
+    }
 ];
 
 (function () {
