@@ -34,7 +34,7 @@ window.EDSEVA_PARTNERS = [
         instagram: "https://www.instagram.com/uclsikhsoc/",
         linkedin: "https://www.linkedin.com/company/ucl-sikh-society/",
         logo: "images/partners/UCL Sikh Soc.jpg",
-        blurb: "The Sikh Society of <b>University College London</b>, a Global Top 10 university known for its academic excellence and diversity. They support us through the prevision of venues for events and mentors."
+        blurb: "The Sikh Society of <b>University College London</b>, a Global Top 10 university known for its academic excellence and diversity. They support us through the provision of venues for events and mentors."
     },
     {
         name: "Warwick Sikh Society",
