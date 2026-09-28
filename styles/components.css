@@ -431,6 +431,167 @@
   font-size: 0.92rem;
 }
 
+/* ---- Freshers fair showcase ---- */
+.freshers-fair-mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.freshers-fair-panel {
+  position: relative;
+  min-height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-3);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-card);
+  isolation: isolate;
+  background: var(--color-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.freshers-fair-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.03);
+  z-index: 0;
+}
+
+.freshers-fair-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 45, 117, 0.05), rgba(6, 45, 117, 0.72));
+  z-index: 0;
+}
+
+.freshers-fair-panel > img,
+.freshers-fair-panel > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.freshers-fair-panel__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.freshers-fair-panel--hero {
+  grid-column: span 7;
+  min-height: 420px;
+}
+
+.freshers-fair-panel--tall {
+  grid-column: span 5;
+  min-height: 201px;
+}
+
+.freshers-fair-panel--wide {
+  grid-column: span 7;
+  min-height: 250px;
+}
+
+.freshers-fair-panel--third {
+  grid-column: span 4;
+}
+
+.freshers-fair-panel--video {
+  grid-column: span 8;
+}
+
+.freshers-fair-panel--video > video {
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.freshers-fair-panel--video .freshers-fair-panel__label {
+  gap: 0.4rem;
+}
+
+.freshers-fair-panel--video .freshers-fair-panel__label::before {
+  content: "▶";
+  font-size: 0.8rem;
+}
+
+.freshers-fair-panel--video::after {
+  background: linear-gradient(180deg, rgba(6, 45, 117, 0.02), rgba(6, 45, 117, 0.5));
+}
+
+.freshers-fair-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(var(--shadow-rgb), 0.16);
+}
+
+/* ---- Image overlay cards ---- */
+.image-overlay-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  min-height: 220px;
+  padding: var(--space-3);
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-card);
+  isolation: isolate;
+}
+
+.image-overlay-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 45, 117, 0.08), rgba(6, 45, 117, 0.78));
+  z-index: 0;
+}
+
+.image-overlay-card__content {
+  position: relative;
+  z-index: 1;
+  max-width: 32rem;
+}
+
+.image-overlay-card__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: var(--color-accent-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.image-overlay-card__title {
+  color: var(--color-bg);
+  margin-bottom: 0.35rem;
+}
+
+.image-overlay-card__text {
+  color: var(--color-on-dark-82);
+  margin: 0;
+}
+
 /* ---- Two column section ---- */
 .split {
   display: grid;
@@ -570,6 +731,22 @@
     grid-template-columns: 1fr;
   }
 
+  .freshers-fair-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .freshers-fair-panel--hero,
+  .freshers-fair-panel--wide,
+  .freshers-fair-panel--video,
+  .freshers-fair-panel--tall,
+  .freshers-fair-panel--third {
+    grid-column: span 1;
+  }
+
+  .freshers-fair-panel--hero {
+    min-height: 360px;
+  }
+
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -592,9 +769,31 @@
   }
 }
 
+@media (max-width: 768px) {
+  .event-card-desktop {
+    grid-template-columns: 1fr !important;
+  }
+
+  .event-card-desktop img {
+    max-height: 250px !important;
+  }
+}
+
 @media (max-width: 600px) {
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .freshers-fair-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .freshers-fair-panel--hero,
+  .freshers-fair-panel--wide,
+  .freshers-fair-panel--video,
+  .freshers-fair-panel--tall,
+  .freshers-fair-panel--third {
+    min-height: 240px;
   }
 
   .founder-card {
