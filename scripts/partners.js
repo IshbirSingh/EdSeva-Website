@@ -49,6 +49,13 @@ window.EDSEVA_PARTNERS = [
         linkedin: "https://www.linkedin.com/company/lsesu-sikh-society/",
         logo: "images/partners/LSE Sikh Soc.jpg",
         blurb: "The Sikh Society of the <b>London School of Economics</b>, a world-renowned institution for social sciences and economics. They support us through the provision of mentors and venues for our events."
+    },
+    {
+        name: "King's Sikh Society",
+        instagram: "https://www.instagram.com/kingssikhs/",
+        linkedin: "",
+        logo: "images/partners/Kings Sikh Soc.jpg",
+        blurb: "The Sikh Society of <b>King's College London</b>, a prestigious institution also having the largest Sikh Soc in London. They support us through the provision of mentors and venues for our events."
     }
 ];
 
